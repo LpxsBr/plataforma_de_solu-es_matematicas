@@ -133,17 +133,32 @@
     <title>Calc Eq 2 Grau</title>
 </head>
 
+<?php
+
+class headerComponent
+{
+    function header()
+    {
+        return route('header');
+    }
+}
+
+// $header = new headerComponent;
+// $header->header();
+?>
+
+<header class="cabecalho">
+    <div class="logo">
+        <img src="../../../storage/images/" alt="logo" class="logoImg">
+    </div>
+    <div class="menu">
+        <a href="https://www.instagram.com/lpxsbr/" class="whoiam">Quem eu sou</a>
+        <a href="https://github.com/LpxsBr" class="others">Github</a>
+        <a href="#" class="Subscribe">Subs</a>
+    </div>
+</header>
+
 <body>
-    <header class="cabecalho">
-        <div class="logo">
-            <img src="../../../storage/images/" alt="logo" class="logoImg">
-        </div>
-        <div class="menu">
-            <a href="https://www.instagram.com/lpxsbr/" class="whoiam">Quem eu sou</a>
-            <a href="https://github.com/LpxsBr" class="others">Github</a>
-            <a href="#" class="Subscribe">Subs</a>
-        </div>
-    </header>
     <main class="conteudo">
         <div class="titulo">
             <h3>Calculadora de Equação de 2 Grau</h3>
@@ -161,7 +176,8 @@
             </form>
         </div>
         <div class="script">
-            <?php //include("calculate/eq2g/calc.php") ?>
+            <?php //include("calculate/eq2g/calc.php") 
+            ?>
         </div>
     </main>
     <footer class="rodape">

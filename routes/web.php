@@ -25,3 +25,7 @@ Route::get('/', function () {
 Route::fallback(function () {
     echo 'a rota acessada não existe. <a href="' . route('inicio') . '">clique aqui</a> para retornar a homepage.  ';
 })->name('error 404');
+
+route::get('/rota', function(){
+    return 'duckapp/components/header.blade.php';
+})->name('header');
