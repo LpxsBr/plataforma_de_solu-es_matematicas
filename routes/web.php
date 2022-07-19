@@ -13,6 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/inicio', 'indexController@index')->name('inicio');
+Route::get('/quem-somos', 'whoIAmController@quemsomos');
+Route::get('/plataforma', 'plataformController@plataforma')->name('plataforma');
+
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('inicio');
 });
+
+// fallback to when not exist route
+Route::fallback(function () {
+    echo 'a rota acessada não existe. <a href="' . route('inicio') . '">clique aqui</a> para retornar a homepage.  ';
+})->name('error 404');
